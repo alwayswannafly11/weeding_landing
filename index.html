@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Александр & Светлана — 28.05.2027</title>
+  <meta name="description" content="Приглашение на свадьбу Александра и Светланы 28 мая 2027 года">
+  <meta name="theme-color" content="#F2EBDD">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <!-- Bad Script нужен только для одной буквы «А» в имени: грузим лишь её -->
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&text=%D0%90&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 1. Обложка -->
+  <header class="hero">
+    <h1 class="hero__title">THE WEDDING DAY</h1>
+    <hr class="hero__line">
+    <p class="hero__names"><span class="hero__initial">А</span>лександр <span class="hero__amp">&amp;</span> Светлана</p>
+    <figure class="photo hero__photo" style="--tilt:-2deg">
+      <img src="images/1.jpg" alt="Александр и Светлана" width="1200" height="1600">
+    </figure>
+    <p class="hero__date">
+      <time datetime="2027-05-28T14:30">28.05.2027 <span class="hero__sep">|</span> 14:30</time>
+    </p>
+  </header>
+
+  <main>
+
+    <!-- 2. Приглашение -->
+    <section class="section intro">
+      <div class="intro__media">
+        <figure class="photo intro__photo" style="--tilt:-3deg">
+          <img src="images/fam.jpg" alt="Светлана, Александр и их собака в сосновом лесу" width="960" height="1280" loading="lazy">
+        </figure>
+        <!-- Полароид с Псом — к «p.s. жаль, что Пёс не рядом» -->
+        <figure class="snap intro__snap" style="--tilt:6deg">
+          <img src="images/7.jpg" alt="Пёс прижался к Александру" width="900" height="1200" loading="lazy">
+        </figure>
+      </div>
+      <p class="intro__text">
+        <strong class="intro__accent"><span class="intro__initial">М</span>ы официально станем семьей!</strong>
+        <br>
+        <br>
+        Для нас это важный день, <br> и мы хотим разделить его с самыми близкими
+        <br>
+        <br>
+        p.s. жаль, что Пёс не рядом, хех
+      </p>
+    </section>
+
+    <!-- 3. Локация -->
+    <section class="section venue">
+      <h2 class="section__title">ЛОКАЦИЯ</h2>
+      <div class="venue__gallery">
+        <figure class="photo venue__photo venue__photo--a">
+          <img src="images/moon_2.jpg" alt="Сад с соснами перед павильоном" width="1067" height="1600" loading="lazy">
+        </figure>
+        <figure class="photo venue__photo venue__photo--b">
+          <img src="images/moon_4.jpg" alt="Стеклянный павильон с террасой среди сосен" width="1600" height="1067" loading="lazy">
+        </figure>
+        <figure class="photo venue__photo venue__photo--c">
+          <img src="images/moon_3.jpg" alt="Банкетный зал с панорамными окнами в сад" width="1600" height="1067" loading="lazy">
+        </figure>
+        <figure class="photo venue__photo venue__photo--d">
+          <img src="images/moon_1.jpg" alt="Банкетный зал с зеркалами и накрытыми столами" width="1600" height="1067" loading="lazy">
+        </figure>
+      </div>
+      <p class="venue__address">Банкетный зал "Луна"</p>
+
+      <a href="https://2gis.ru/barnaul/firm/70000001094280245?m=83.604568%2C53.295667%2F20.07"
+         target="_blank" rel="noopener" class="venue__address venue__link"
+         title="Открыть на карте 2ГИС">г. Барнаул, пос. Пригородный, ул. Раздольная, д. 22</a>
+    </section>
+
+    <!-- 4. Тайминг — кинопленка -->
+    <section class="section timing">
+      <h2 class="section__title">ТАЙМИНГ</h2>
+      <div class="reel" id="reel">
+        <!-- Плёнка для десктопа: широкая S-кривая -->
+        <svg class="reel__svg reel__svg--wide" viewBox="0 0 1000 1400" aria-hidden="true" focusable="false">
+          <defs>
+            <path id="reel-path-wide"
+                  d="M520 0 C520 120 260 140 260 300 C260 480 740 460 740 700 C740 940 300 900 300 1100 C300 1250 520 1280 520 1400"/>
+            <mask id="reel-mask-wide" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1400">
+              <path class="reel__progress" pathLength="1" stroke-width="170"
+                    d="M520 0 C520 120 260 140 260 300 C260 480 740 460 740 700 C740 940 300 900 300 1100 C300 1250 520 1280 520 1400"/>
+            </mask>
+          </defs>
+          <g mask="url(#reel-mask-wide)">
+            <use href="#reel-path-wide" class="reel__base"   stroke-width="130"/>
+            <use href="#reel-path-wide" class="reel__holes"  stroke-width="112" stroke-dasharray="9 15"/>
+            <use href="#reel-path-wide" class="reel__body"   stroke-width="90"/>
+            <use href="#reel-path-wide" class="reel__frames" stroke-width="74"  stroke-dasharray="96 9"/>
+          </g>
+        </svg>
+
+        <!-- Плёнка для мобильных: узкая S-кривая -->
+        <svg class="reel__svg reel__svg--narrow" viewBox="0 0 400 1300" aria-hidden="true" focusable="false">
+          <defs>
+            <path id="reel-path-narrow"
+                  d="M200 0 C200 100 110 150 110 300 C110 480 290 460 290 650 C290 840 110 820 110 1000 C110 1150 200 1200 200 1300"/>
+            <mask id="reel-mask-narrow" maskUnits="userSpaceOnUse" x="0" y="0" width="400" height="1300">
+              <path class="reel__progress" pathLength="1" stroke-width="100"
+                    d="M200 0 C200 100 110 150 110 300 C110 480 290 460 290 650 C290 840 110 820 110 1000 C110 1150 200 1200 200 1300"/>
+            </mask>
+          </defs>
+          <g mask="url(#reel-mask-narrow)">
+            <use href="#reel-path-narrow" class="reel__base"   stroke-width="72"/>
+            <use href="#reel-path-narrow" class="reel__holes"  stroke-width="60" stroke-dasharray="5 9"/>
+            <use href="#reel-path-narrow" class="reel__body"   stroke-width="48"/>
+            <use href="#reel-path-narrow" class="reel__frames" stroke-width="40" stroke-dasharray="52 5"/>
+          </g>
+        </svg>
+
+        <!-- Кадры с таймингом: лежат на изгибах плёнки -->
+        <ol class="reel__cards">
+          <li class="reel__card">
+            <time class="reel__time" datetime="14:30">14:30</time>
+            <span class="reel__event">Сбор гостей</span>
+          </li>
+          <li class="reel__card">
+            <time class="reel__time" datetime="15:00">15:00</time>
+            <span class="reel__event">Торжественная церемония</span>
+          </li>
+          <li class="reel__card">
+            <time class="reel__time" datetime="16:00">16:00</time>
+            <span class="reel__event">Банкет</span>
+            <span class="reel__note">до 22:00</span>
+          </li>
+        </ol>
+
+        <!-- Фото в свободных местах у плёнки, зигзагом: справа сверху,
+             слева у среднего изгиба, справа внизу -->
+        <figure class="snap reel__snap reel__snap--top" style="--tilt:5deg">
+          <img src="images/5.jpg" alt="Светлана и Александр в песчаном каньоне" width="900" height="1200" loading="lazy">
+        </figure>
+        <figure class="snap reel__snap reel__snap--mid" style="--tilt:-5deg">
+          <img src="images/11.jpg" alt="Поцелуй на деревянном мостике в горах, рядом сидит Пёс" width="1024" height="1280" loading="lazy">
+        </figure>
+        <figure class="snap reel__snap reel__snap--bottom" style="--tilt:4deg">
+          <img src="images/9.jpg" alt="На горнолыжном склоне среди заснеженных елей" width="802" height="1200" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- 5. Дресс-код -->
+    <section class="section dresscode">
+      <h2 class="section__title">ДРЕСС-КОД</h2>
+      <p class="section__lead">Минимализм и пастельные тона</p>
+      <ul class="swatches" aria-label="Подходящие оттенки">
+        <li class="swatch" style="--c:#E3EBE1"></li>
+        <li class="swatch" style="--c:#CFDCCB"></li>
+        <li class="swatch" style="--c:#FADCD0"></li>
+        <li class="swatch" style="--c:#F3C4B2"></li>
+      </ul>
+      <p class="section__text">
+        Мы любим Вас любыми и не ограничиваем палитрой, но будем очень рады, если Вы не будете использовать в одежде
+        яркие и броские цвета (красные, желтые, оранжевые и в этом роде).
+      </p>
+    </section>
+
+    <!-- 6. Пожелания -->
+    <section class="section wishes">
+      <h2 class="section__title">ПОЖЕЛАНИЯ</h2>
+      <p class="section__lead">Пожалуйста, не дарите нам цветы!</p>
+      <p class="section__text">
+        Цветы завянут, а добрые дела останутся в памяти.
+        <br>
+        Если Вы планировали что-то
+        принести с собой — принесите:
+      </p>
+      <ul class="wishes__list">
+        <li>корм для животных</li>
+        <li>лекарства</li>
+        <li>игрушки</li>
+      </ul>
+      <p class="section__text">
+        После свадьбы мы пожертвуем это в кошачье-собачий приют и станем с Вами частью большого и доброго дела.
+      </p>
+      <div class="snaps">
+        <figure class="snap" style="--tilt:-5deg">
+          <img src="images/4.jpg" alt="Пёс валяется на кровати" width="900" height="1200" loading="lazy">
+        </figure>
+        <figure class="snap" style="--tilt:4deg">
+          <img src="images/12.jpg" alt="Пёс с палкой в зубах на осенней листве" width="960" height="1280" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- 7. Будьте собой -->
+    <section class="section be-yourself">
+      <h2 class="section__title">Самое главное, будьте собой!</h2>
+      <p class="section__text">
+        Если Вам не нравится — не готовьте речи, говорите от души!
+        <br>
+        На свадьбе не будет
+        продаж торта и прочих корыстных конкурсов.
+        <br>
+        Приходите и повеселитесь от души!
+      </p>
+      <div class="snaps">
+        <figure class="snap" style="--tilt:-4deg">
+          <img src="images/3.jpg" alt="Поцелуй у стены с надписью «С правильным человеком рядом начинаешь любить себя сильнее»" width="900" height="1200" loading="lazy">
+        </figure>
+        <figure class="snap" style="--tilt:5deg">
+          <img src="images/8.jpg" alt="Светлана и Александр строят рожицы в камеру" width="900" height="1200" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- 8. Анкета (RSVP) -->
+    <section class="section rsvp" id="rsvp">
+      <h2 class="section__title">Анкета гостя</h2>
+
+      <div class="rsvp__body" id="rsvp-body">
+        <p class="section__text">
+          Чтобы Вам было комфортно разделить с нами этот момент, а нам было комфортно все
+          спланировать, пожалуйста, ответьте на несколько вопросов ниже
+        </p>
+
+        <form class="form" id="rsvp-form" novalidate>
+          <div class="form__field">
+            <label class="form__label" for="guest-name">Ваше имя и фамилия</label>
+            <input class="form__input" type="text" id="guest-name" name="name" autocomplete="name" required>
+          </div>
+
+          <fieldset class="form__field">
+            <legend class="form__label">Планируете ли присутствовать на свадьбе?</legend>
+            <label class="choice">
+              <input type="radio" name="attendance" value="Конечно да!" required>
+              <span>Конечно да!</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="attendance" value="К сожалению, нет :(">
+              <span>К сожалению, нет :(</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="attendance" value="Дам ответ чуть позже">
+              <span>Дам ответ чуть позже</span>
+            </label>
+          </fieldset>
+
+          <div class="form__field" data-if-attending>
+            <label class="form__label" for="partner-name">
+              Если Вы планируете прийти с парой, пожалуйста, укажите фамилию и имя
+            </label>
+            <input class="form__input" type="text" id="partner-name" name="partner">
+          </div>
+
+          <fieldset class="form__field" data-if-attending>
+            <legend class="form__label">
+              Отметьте свои предпочтения по напиткам <span class="form__hint">(можно выбрать несколько)</span>
+            </legend>
+            <label class="choice"><input type="checkbox" name="drinks" value="Игристое"><span>Игристое</span></label>
+            <label class="choice"><input type="checkbox" name="drinks" value="Вино белое"><span>Вино белое</span></label>
+            <label class="choice"><input type="checkbox" name="drinks" value="Вино красное"><span>Вино красное</span></label>
+            <label class="choice"><input type="checkbox" name="drinks" value="Водка"><span>Водка</span></label>
+            <label class="choice"><input type="checkbox" name="drinks" value="Не пью алкоголь"><span>Не пью алкоголь</span></label>
+            <label class="choice choice--other">
+              <input type="checkbox" name="drinks" value="Иное" id="drinks-other-toggle">
+              <span>Иное:</span>
+              <input class="form__input form__input--inline" type="text" name="drinks_other"
+                     id="drinks-other" aria-label="Другой напиток" disabled>
+            </label>
+          </fieldset>
+
+          <p class="form__error" id="form-error" role="alert" hidden></p>
+
+          <button class="button" type="submit" id="form-submit">Отправить</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 9. Финал. После отправки анкеты скрывается всё, кроме него, и фокус
+       переходит сюда (tabindex="-1" — чтобы блок мог получить фокус из JS) -->
+  <footer class="finale" id="finale" tabindex="-1">
+    <p class="finale__text">Мы Вас очень ждем на тусовку года!</p>
+    <!-- Россыпь фото. На мобильных — два узких в ряд, широкий под ними;
+         на десктопе широкий кадр с вечеринки переставлен в центр (order) -->
+    <div class="snaps snaps--pile">
+      <figure class="snap" style="--tilt:-5deg">
+        <img src="images/6.jpg" alt="Вечер на террасе в старом городе" width="900" height="1200" loading="lazy">
+      </figure>
+      <figure class="snap" style="--tilt:4deg">
+        <img src="images/10.jpg" alt="Двое в горнолыжных масках на фоне синего неба" width="788" height="1200" loading="lazy">
+      </figure>
+      <figure class="snap snap--wide" style="--tilt:-2deg">
+        <img src="images/2.jpg" alt="Поцелуй на вечеринке" width="1200" height="800" loading="lazy">
+      </figure>
+    </div>
+    <p class="finale__sign">Ваши Света и Саша &lt;3</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
